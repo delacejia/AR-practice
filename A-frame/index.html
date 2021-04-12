@@ -8,71 +8,25 @@
   <script src="js/userState.js"></script>
   <script src="js/interaction.js"></script> -->
 <body style='margin : 0px; overflow: hidden;'>
-   <div class='speech-bubble'></div>
+   <div></div>
 	<a-scene embedded arjs>
 		
 
-    <!-- handle marker with demo cat pattern -->
-    <a-marker id="demo-marker" type='pattern' url='builder-markers/demo.patt'>
-     <!--  <a-box position='0 0.5 0' material='color: red;'></a-box> -->
-     <a-image src="images/jewetthallway1.jpg" rotation = "90, 180, 0" scale = "3 2.25 2.25" position="0 0 -1"></a-image>
-     <a-text id="demo" value="Hallway in Jewett. 1958." position="0 0 0.5" color="red" align="center" rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
+    <!-- handle marker with lights -->
+    <a-marker type='pattern' url='markers/pattern-lights_megacrop.patt'>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
     </a-marker> 
 
-     <!-- handle marker with question mark circle inscribed inside square pattern -->
-     <a-marker type='pattern' url='builder-markers/square_circle.patt'>
-     <a-image src="images/jewetthallway2.jpg" rotation = "90, 180, 0" scale = "3 2.25 2.25" position="0 0 -1"></a-image> 
-      <a-text value="Art exhibit in Jewett. Date unknown, 1958-1990" position="0 0 0.5" color="red" align="center"  rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
+     <!-- handle marker with fish -->
+     <a-marker type='pattern' url='markers/pattern-fish_bleu.patt'>
+     <a-image src="images/fish.jpg" rotation = "90, 180, 0" scale = "3 2.25 2.25" position="0 0 -1"></a-image> 
+      <a-text value="Hello there!!!" position="0 0 0.5" color="red" align="center"  rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
     </a-marker> 
-
-     <!-- handle marker with hiro preset -->
-    <a-marker preset='hiro'>
-      <!-- image is portrait oriented-->
-      <a-image src="images/sculpturestaircase1.jpg" rotation = "90, 180, 0" scale = "2.25 3 2.25" position="0 0 -1"></a-image>
-     <a-text value="Hallway in Jewett. Date unknown, 1958-1990." position="0 0 1" color="red" align="center" rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
-    </a-marker> 
-
-     <!-- handle marker with question mark octagon inscribed inside square pattern -->
-    <a-marker type='pattern' url='builder-markers/square_octagon.patt'>
-       <a-image src="images/auditorium1.jpg" rotation = "90, 180, 0" scale = "3 2.25 2.25" position="0 0 -1"></a-image>
-        <a-text value="Jewett Arts Center Theatre. Students in costume on the stage. 1959." position="0 0 1" color="red" align="center" rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
-    </a-marker>  
-  
-
-      <!-- handle marker with question mark square inscribed inside square pattern -->
-    <a-marker type='pattern' url='builder-markers/square_square.patt'>
-       <a-image src="images/sculptureabove1.jpg" rotation = "90, 180, 0" scale = "3 2.25 2.25" position="0 0 -1"></a-image>
-        <a-text value="Gallery with ancient sculpture and students. Date unknown, 1960-1990." position="0 0 1" color="red" align="center" rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
-    </a-marker>  
    
-       <!-- handle marker with question mark diamond inscribed inside square pattern -->
-    <a-marker type='pattern' url='builder-markers/square_diamond.patt'>
-      <!-- image is portrait oriented-->
-       <a-image src="images/musicside1.jpg" rotation = "90, 180, 0" scale = "2.25 3 2.25" position="0 0 -1"></a-image>
-        <a-text value="Student in Jewett. Fall 1978." position="0 0 1" color="red" align="center" rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
-    </a-marker>  
-
-        <!-- handle marker with question mark triangle inscribed inside square pattern -->
-    <a-marker type='pattern' url='builder-markers/square_triangle.patt'>
-      <!-- image is portrait oriented-->
-       <a-image src="images/twostudents.jpg" rotation = "90, 180, 0" scale = "2.25 3 2.25" position="0 0 -1"></a-image>
-        <a-text value="Two students in Jewett. April 19, 1970." position="0 0 1" color="red" align="center" rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
-    </a-marker>  
-
-
-       <!-- handle marker with pyra pattern -->
-    <a-marker type='pattern' url='builder-markers/pyra.patt'>
-       <a-image src="images/musicperf1.jpg" rotation = "90, 180, 0" scale = "3 2.25 2.25" position="0 0 -1"></a-image>
-        <a-text value="Music performance in Jewett, 1968." position="0 0 0.5" color="red" align="center" rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
-    </a-marker>  
-
-  <!-- handle marker with frenchie pattern -->
-    <a-marker type='pattern' url='builder-markers/frenchie.patt'>
-       <a-image src="images/gallery1.jpg" rotation = "90, 180, 0" scale = "3 2.25 2.25" position="0 0 -1"></a-image>
-        <a-text value="Art exhibit in Jewett. 1977" position="0 0 0.5" color="red" align="center" rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
-    </a-marker>  
-   
-     
+     <!-- handle marker with fish
+     <a-marker type='pattern' url='markers/pattern-fork-01.patt'> 
+       <a-text value="Hello there!!!" position="0 0 0.5" color="red" align="center"  rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
+     </a-marker>  -->
 
     <!-- add a simple camera -->
      <a-entity camera></a-entity> 
