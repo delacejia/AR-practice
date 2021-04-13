@@ -17,12 +17,20 @@
       <a-cylinder position="0 0 0.5" radius="0.5" height="1.5" material="opacity: 0.7;" color="#FFC65D" shadow></a-cylinder>
     </a-marker> 
     
-    <!-- handle marker with pizza -->
+    <!-- sounds -->
+    <a-assets>
+      <audio id="lefestin" src="audio/le-festin.mp3" preload="auto"></audio>
+    </a-assets>
+
+    <!-- handle marker with kanji-->
     <a-marker preset='kanji'>
-      <a-cylinder position="0 0 0.5" radius="0.3" height="1.2" color="red"></a-cylinder>
+      <!-- <a-cylinder position="0 0 0.5" radius="0.3" height="1.2" color="red"></a-cylinder> -->
+      <a-box position='0 0.5 0' material='color: black;' soundhandler> </a-box>
     </a-marker> 
 
-     <!-- handle marker with fish -->
+    <a-entity sound="src: #lefestin" autoplay="false"></a-entity>
+
+     <!-- handle marker with hiro -->
      <a-marker preset='hiro'>
      <a-image src="images/fish.jpg" rotation = "90, 180, 0" scale = "3 2.25 2.25" position="0 0 -1"></a-image> 
       <a-text value="Hello there!!!" position="0 0 0.5" color="red" align="center"  rotation="-89 0 0" text="width:3;wrapCount:20"></a-text>
@@ -36,5 +44,20 @@
     <!-- add a simple camera -->
      <a-entity camera></a-entity> 
  	</a-scene>
+
+   <script>
+    AFRAME.registerComponent('soundhandler', {
+        tick: function () {
+               var entity = document.querySelector('[sound]');
+             if (document.querySelector('a-marker').object3D.visible == true) {
+                entity.components.sound.playSound();
+            } else {
+                entity.components.sound.pauseSound();
+            }
+    
+         }
+    });
+    </script>
+
 </body>
 </html>
